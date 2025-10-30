@@ -6,4 +6,14 @@ import tsconfigPaths from 'vite-tsconfig-paths'
 export default defineConfig({
     base: 'https://www.thororen.com/beycord',
     plugins: [react(), tsconfigPaths()],
+    server: {
+        allowedHosts: [".thororen.com"],
+        port: 8080,
+        strictPort: true,
+    },
+    preview: {
+        allowedHosts: [".thororen.com"],
+        port: 8080,
+        strictPort: true,
+    },
 })
